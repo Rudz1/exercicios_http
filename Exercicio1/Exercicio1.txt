@@ -1,0 +1,12 @@
+1- Criar um servidor http utilizando PHP:
+    • nome servidor: calculadora.php
+    • o servidor deve aceitar apenas requisições do tipo POST, caso seja realizado uma requisição com qualquer outro METODO HTTP o servidor deve retornar a seguinte resposta: {“error”:”method_not_allowed”,”mensage”:”apenas requisições HTTP são aceitas”} e o código HTTP do status da resposta deve ser 400
+    • O servidor deve aceitar apenas requisiçoes com o content-type do tipo: application/json
+    • O servidor deve receber no corpo da requisição o seguinte json valido: {“numero1”:1,”numero2”:1,”operacao”:”somar”}
+        ◦ operacao: nesse campo deve ser informado o tipo de operação que pode ser: somar, subtrair, multiplicar, dividir
+        ◦ numero1: numero que deseja realizar a opção
+        ◦ numero2: numero que deseja realizar a opção
+        ◦ Exemplo: {“numero1”:1,”numero2”:1,”operacao”:”somar”} deve retornar {“result”:2} e o código HTTP do status da resposta 200
+        ◦ Exemplo: {“numero1”:10,”numero2”:2,”operacao”:”multiplicar”} deve retornar {“result”:20} e o código HTTP do status da resposta 200
+        ◦ caso o numero2 seja zero e a operação seja igual a dividir, deve retornar um erro {“error”:”division_by_zero”,”message”:”o numero 2 não pode ser zero”} e o código HTTP do status da resposta deve ser 400
+        ◦ Se não for enviado um json valido contendo as três informações(numero1, numero2, operacao) deve retornar um erro {“error”:”invalid_request”,”message”:”os dados informados não são validos”} e o código HTTP do status da resposta deve ser 400

@@ -1,0 +1,17 @@
+
+6- Criar uma interface html 5: 
+    1. Criar um formulário que peça para o usuário digitar o numero1, numero2 
+    e operacao e então montar uma requisição utilizando o Javascript XHR  e enviar
+    ao servidor calculadora.php. Quando o servidor responder, se for um erro, deve 
+    mostrar um alert com a mensagem do erro. Se for um o resultado correto da operação,
+    inserir na tela a mensagem “O resultado é: x” onde x é o numero retornado no json  {“result”:”x”}
+
+    • Criar um formulário que peça para o usuário digitar o numero1, numero2 e operacao e então montar
+    uma requisição utilizando o Jquery  e enviar ao servidor calculadora.php. Quando o servidor responder,
+    se for um erro, deve mostrar um alert com a mensagem do erro. Se for um o resultado correto da operação,
+    inserir na tela a mensagem “O resultado é: x” onde x é o numero retornado no json  {“result”:”x”}
+
+    • Criar um formulário que peça para o usuário digitar o numero1, numero2 e operacao e então montar 
+    uma requisição utilizando o Angularjs  e enviar ao servidor calculadora.php. Quando o servidor responder, 
+    se for um erro, deve mostrar um alert com a mensagem do erro. Se for um o resultado correto da operação, 
+    inserir na tela a mensagem “O resultado é: x” onde x é o numero retornado no json  {“result”:”x”}

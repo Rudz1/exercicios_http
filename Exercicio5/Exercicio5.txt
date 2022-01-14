@@ -1,0 +1,4 @@
+
+5- Criar requisições utilizando o cliente php do terminal:
+    • Criar requisição para o servidor calculadora.php utilizando as 4 operações(somar, subtrair, multiplicar, dividir) e numero1=10 e numero2=2
+    • Criar requisição para o servidor calculadora-proxy.php utilizando as 4 operações(somar, subtrair, multiplicar, dividir) e numero1=10 e numero2=2
