@@ -59,7 +59,7 @@ try {
             $resultado = '{"result" : ' . ($calculadora->numero1 / $calculadora->numero2) . '}';
             break;
         default:
-            throw new \Exception('{"error" : "invalid_operator", "message" : "Operador informado é invalido, operadores validos(somar, subtrair, multiplicar, dividir)', 422);
+            throw new \Exception('{"error" : "invalid_operator", "message" : "Operador informado é invalido, operadores validos(somar, subtrair, multiplicar, dividir)"}', 422);
             break;
     }
 
