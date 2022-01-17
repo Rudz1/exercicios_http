@@ -1,5 +1,5 @@
 <!DOCTYPE html>  
-<html>  
+<html ng-app="aplicacao">  
     <head>  
         <title>Angular</title>    
     </head>  
@@ -12,17 +12,14 @@
         <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
         <script>
             var url = 'http://localhost/Exercicio1/calculadora.php';
-            var calculadora = function () {
-                return $http.get(url).then(function (response) {
-                    console.log("conexão foi realizada")
-                    console.log(response.data);
-
-                }).catch(
-                        console.log("falha na conexão")
+            angular.module('aplicacao', []);
+            angular.module('aplicacao').controller('Rest', function ($scope, $http) {
+                $http.get(url).
+                        success(function (data) {
+                            $scope.usuario = data;
+                        }
                         );
-                console.log("falha na conexão")
-            };
-            console.log("falha na conexão")
+            });
 
 
 
