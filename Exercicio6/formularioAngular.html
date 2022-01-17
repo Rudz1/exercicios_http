@@ -1,53 +1,29 @@
 <!DOCTYPE html>  
-<html ng-app="app">  
+<html>  
     <head>  
         <title>Angular</title>    
     </head>  
     <body>
 
-        <button (click)="calculadora()">POST</button>
+        <button onclick="calculadora()">POST</button>
 
 
 
         <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
         <script>
-            import { BrowserModule } from '@angular/platform-browser';
-            import { NgModule } from '@angular/core';
-            import { AppComponent } from './app.component';
-            import { HttpClientModule } from '@angular/common/http';
-            @NgModule({
-            declarations: [
-                    AppComponent
-            ],
-                    imports: [
-                            BrowserModule,
-                            HttpClientModule
-                    ],
-                    providers: [],
-                    bootstrap: [AppComponent]
-            })
-            export class AppModule {
-            }
+            var url = 'http://localhost/Exercicio1/calculadora.php';
+            var calculadora = function () {
+                return $http.get(url).then(function (response) {
+                    console.log("conexão foi realizada")
+                    console.log(response.data);
 
-            constructor(private http : HttpClient) {
-            }
+                }).catch(
+                        console.log("falha na conexão")
+                        );
+                console.log("falha na conexão")
+            };
+            console.log("falha na conexão")
 
-            readonly apiURL : string;
-            constructor() {}
-            calculadora() {
-            var soma = { numero1 : "10", numero2 : "2", operacao : "somar" };
-            this.http.post(`http://localhost/Exercicio1/calculadora.php`, soma)
-                    .subscribe(
-                            resultado => {
-                                console.log(resultado)
-                            },
-                            erro => {
-                            if (erro.status == 400) {
-                                console.log(erro);
-                                }
-                            }
-                    );
-            }
 
 
         </script> 
